@@ -11,7 +11,7 @@ def get_date(datestamp):
     global data
     date = DataPoint.create_date(datestamp)
     print("Searching for {}".format(date))
-    filtered = list(it.takewhile(lambda d: d.date == date, data))
+    filtered = list(filter(lambda d: d.date == date, data))
     if len(filtered) > 0:
         return filtered.pop()
     else:
@@ -29,17 +29,16 @@ def higher_than(data, temp):
     '''
     Returns a list of all DataPoints that had temps higher than the given temp
     '''
-    filtered = list(filter(lambda d: d.high >= temp, data))
-    return filtered
+    return list(filter(lambda d: d.high >= temp, data))
 
 def lower_than(data, temp):
     '''
     Returns a list of all DataPoints that had temps lower than the given temp
     '''
-    filtered = list(filter(lambda d: d.low <= temp, data))
-    return filtered
+    return list(filter(lambda d: d.low <= temp, data))
 
 def had_precip(data,precip):
     '''
     Returns a lits of all DataPoints that had precipitation
     '''
+    return list(filter(lambda d: d.precip > 0, data))
