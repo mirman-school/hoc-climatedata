@@ -37,8 +37,8 @@ def lower_than(data, temp):
     '''
     return list(filter(lambda d: d.low <= temp, data))
 
-def had_precip(data,precip):
+def has_precip(data,precip):
     '''
-    Returns a lits of all DataPoints that had precipitation
+    Returns a list of all DataPoints with precipitation > 0
     '''
-    return list(filter(lambda d: d.precip > 0, data))
+    return None # You need to implement this, using the above functions as a pattern!
