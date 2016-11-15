@@ -11,6 +11,7 @@ class DataPoint:
 
 	def __init__(self,data):
 		self.date = DataPoint.create_date(data[5])
+		self.precip = float(data[6])
 		self.high = int(data[7])
 		self.low = int(data[8])
 
