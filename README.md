@@ -34,3 +34,14 @@ Starting on line 21, we define a function called `load_data()` that returns a _l
 
 ### `visualizer.py`
 This is where we write our code. You'll see two example functions: one for printing text to the Terminal, and one for creating graphs of our data. We use [pyplot](http://matplotlib.org/users/pyplot_tutorial.html) to generate our graphs.
+
+## Running your code
+To run the Python code, you will use Terminal. Open it up, and use the `cd` command to navigate to this folder. Terminal opens one level above your `Downloads/` folder, so if you downloaded/unzipped this folder in your Downloads, enter:
+
+    cd Downloads/hoc-climatedata-master
+
+If it's on your Desktop, same thing, but `Desktop` in lieu of `Downloads`.
+
+From there, to run and re-run your code, enter:
+
+    python3 visualizer.py
